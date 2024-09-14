@@ -1,0 +1,235 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark gradient */
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #1e272e; /* Dark background for the container */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ecf0f1;
+    font-weight: 800;
+    background: linear-gradient(45deg, #e84393, #6c5ce7); /* Dark gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    animation: textGlow 1.5s infinite alternate;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section {
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 2px solid #4b4b4b;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #2d3436; /* Dark background for fieldset */
+    border-radius: 10px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #e84393; /* Darker accent color */
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ecf0f1;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #636e72;
+    border-radius: 8px;
+    background-color: #2d3436;
+    color: #ecf0f1;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #e84393;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #e84393;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #d63031;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.resume-section {
+    margin-top: 40px;
+}
+
+#resume {
+    padding: 20px;
+    background-color: #2d3436;
+    border-radius: 10px;
+    border: 2px solid #636e72;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#resume-content {
+    color: #ecf0f1;
+}
+
+#resume-content h3 {
+    color: #e84393;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.share-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#shareable-link {
+    display: block;
+    margin: 20px 0;
+    color: #e84393;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+#shareable-link:hover {
+    color: #6c5ce7;
+    text-decoration: underline;
+}
+
+#copy-link-btn,
+#download-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #636e72;
+    color: #ecf0f1;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+}
+
+#copy-link-btn:hover,
+#download-btn:hover {
+    background-color: #535c68;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: #535c68;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    form,
+    fieldset {
+        padding: 15px;
+    }
+
+    legend {
+        font-size: 1.2rem;
+    }
+
+    input,
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    input,
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 87, 34, 0.8);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 87, 34, 1);
+    }
+}
